@@ -10,8 +10,8 @@ menuHamburger.addEventListener('click', () => {
   });
   setTimeout(() => {
     main.classList.toggle('inactive');
-  }, 200);
+  }, 100);
   setTimeout(() => {
     footer.classList.toggle('inactive');
-  }, 300);
+  }, 100);
 });

@@ -138,13 +138,13 @@ main section:nth-child(1) h1 {
   color: white;
   line-height: 1.2;
   font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .campaign {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: white;
 }
 
@@ -166,17 +166,27 @@ main section:nth-child(1) h1 {
 }
 
 .section-1__buttons-container .start {
-  background-color: black;
+  background-color: rgb(25, 20, 20);
+  border: 2px solid rgb(25, 20, 20);
 }
 
 .section-1__buttons-container .see-plans {
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 .terms {
+  display: inline-block;
   font-size: 11px;
+  font-weight: lighter;
   text-decoration: underline;
+  color: white;
+}
+
+.terms-secondary {
+  display: inline;
+  font-size: 11px;
+  font-weight: lighter;
   color: white;
 }
 
@@ -186,7 +196,7 @@ main section:nth-child(2) {
 }
 
 main section:nth-child(2) h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.5;
   text-align: center;
@@ -201,6 +211,7 @@ main section:nth-child(2) h2 {
 .benefits li {
   list-style: none;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .benefits li:nth-child(1) .benefits__image-container {
@@ -233,14 +244,14 @@ main section:nth-child(2) h2 {
 }
 
 .benefits__info p:nth-child(1) {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 1.3em;
+  margin-bottom: 16px;
 }
 
 .benefits__info p:nth-child(2) {
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 100;
 }
 
 main section:nth-child(3) {
@@ -269,6 +280,7 @@ main section:nth-child(3) h3 {
 .pay-methods {
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .pay-methods ul {
@@ -278,12 +290,9 @@ main section:nth-child(3) h3 {
   align-items: center;
 }
 
-
 .pay-methods ul li {
   list-style: none;
 }
-
-.pay-methods ul li
 
 .pay-methods ul li:nth-child(1) .img-pay {
   background-image: url('https://content-tooling.spotifycdn.com/images/a9609ece-0ff6-4403-b2ab-d6ad86e95739_visa.svg');
@@ -325,12 +334,11 @@ main section:nth-child(3) h3 {
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
 }
 
 .plans__card {
-  height: 460px;
+  /* min-height: 460px; */
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -340,9 +348,9 @@ main section:nth-child(3) h3 {
 -moz-box-shadow: 2px 2px 21px -5px rgba(0,0,0,1);
 }
 
-.plans .plans__card:nth-child(4) {
+/* .plans .plans__card:nth-child(4) {
   height: 470px;
-}
+} */
 
 .plans__card span {
   width: fit-content;
@@ -354,15 +362,21 @@ main section:nth-child(3) h3 {
   color: #0d72ea;
 }
 
+.plans__card span:nth-child(1) {
+  margin-bottom: 8px;
+  background-color: #0d72ea;
+  color: white;
+}
+
 .plans__card--text-container {
-  height: 100px;
-  padding: 10px 0;
+  padding-top: 10px;
 }
 
 .plans .plans__card h3 {
   text-align: left;
   font-size: 24px;
   font-weight: bold;
+  padding: 0;
 }
 
 .plans .plans__card p {
@@ -371,10 +385,12 @@ main section:nth-child(3) h3 {
   line-height: 22px;
 }
 
+.plans__card hr {
+  margin: 20px 0;
+}
+
 .plans__card--benefits-list {
   display: flex;
-  height: 190px;
-  padding: 20px 0;
 }
 
 .plans__card--benefits-list ul {
@@ -417,19 +433,18 @@ main section:nth-child(3) h3 {
   outline: none;
 }
 
-.plans .plans__card:nth-child(4) button {
-  margin-top: 0;
-}
-
-.plans .plans__card:nth-child(4) .terms {
-  padding-top: 8px;
-}
-
 .plans .plans__card .terms {
   color: black;
   font-size: 12px;
-  line-height: 16px;
   padding-top: 20px;
+  line-height: initial;
+}
+
+.plans .plans__card .terms ~ p {
+  display: inline;
+  font-size: 12px;
+  color: black;
+  line-height: initial;
 }
 
 footer {
@@ -529,7 +544,6 @@ footer li {
   font-size: 10px;
   text-align: end;
 }
-
 
 .inactive {
   display: none;
