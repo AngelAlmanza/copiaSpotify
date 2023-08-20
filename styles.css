@@ -5,6 +5,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 header {
   width: 100%;
   height: 54px;
@@ -13,6 +17,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header__menu {
@@ -134,6 +144,7 @@ header {
   width: 100vw;
   height: calc(100vh - 54px);
   right: 0;
+  top: 54px;
   animation-name: openMenu;
   animation-duration: .5s;
   animation-iteration-count: 1;
@@ -155,7 +166,7 @@ header {
 
 .menu li a {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   color: white;
 }
@@ -193,13 +204,13 @@ main section:nth-child(1) h1 {
   font-weight: 900;
   color: white;
   line-height: 1.2;
-  font-size: 24px;
+  font-size: 2.4rem;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 .campaign {
-  font-size: 18px;
+  font-size: 1.8rem;
   margin-bottom: 24px;
   color: white;
 }
@@ -216,7 +227,7 @@ main section:nth-child(1) h1 {
   outline: none;
   border: none;
   border-radius: 32px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: white;
 }
@@ -233,7 +244,7 @@ main section:nth-child(1) h1 {
 
 .terms {
   display: inline-block;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: lighter;
   text-decoration: underline;
   color: white;
@@ -241,7 +252,7 @@ main section:nth-child(1) h1 {
 
 .terms-secondary {
   display: inline;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: lighter;
   color: white;
 }
@@ -252,7 +263,7 @@ main section:nth-child(2) {
 }
 
 main section:nth-child(2) h2 {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 900;
   line-height: 1.5;
   text-align: center;
@@ -300,13 +311,13 @@ main section:nth-child(2) h2 {
 }
 
 .benefits__info p:nth-child(1) {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 16px;
 }
 
 .benefits__info p:nth-child(2) {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 100;
 }
 
@@ -320,7 +331,7 @@ main section:nth-child(3) h2, main section:nth-child(3) h3 {
 }
 
 main section:nth-child(3) h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: bold;
   line-height: 1;
   padding: 10px 20px;
@@ -328,7 +339,7 @@ main section:nth-child(3) h2 {
 }
 
 main section:nth-child(3) h3 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: normal;
   padding: 0 10px;
 }
@@ -394,9 +405,10 @@ main section:nth-child(3) h3 {
 }
 
 .plans__card {
-  /* min-height: 460px; */
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 2px 2px 21px -5px rgba(0,0,0,1);
@@ -404,22 +416,19 @@ main section:nth-child(3) h3 {
 -moz-box-shadow: 2px 2px 21px -5px rgba(0,0,0,1);
 }
 
-/* .plans .plans__card:nth-child(4) {
-  height: 470px;
-} */
-
 .plans__card span {
+  display: block;
   width: fit-content;
   border: 1px solid #0d72ea;
   border-radius: 4px;
+  margin-bottom: 8px;
   padding: 4px 8px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 900;
   color: #0d72ea;
 }
 
 .plans__card span:nth-child(1) {
-  margin-bottom: 8px;
   background-color: #0d72ea;
   color: white;
 }
@@ -430,13 +439,13 @@ main section:nth-child(3) h3 {
 
 .plans .plans__card h3 {
   text-align: left;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: bold;
   padding: 0;
 }
 
 .plans .plans__card p {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 22px;
 }
@@ -470,7 +479,7 @@ main section:nth-child(3) h3 {
 }
 
 .benefits-list__element p {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
@@ -481,7 +490,7 @@ main section:nth-child(3) h3 {
   margin-top: 20px;
   border-radius: 500px;
   padding: 14px 32px;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   color: white;
   background-color: black;
@@ -491,39 +500,44 @@ main section:nth-child(3) h3 {
 
 .plans .plans__card .terms {
   color: black;
-  font-size: 12px;
+  font-size: 1.2rem;
   padding-top: 20px;
   line-height: initial;
 }
 
 .plans .plans__card .terms ~ p {
   display: inline;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: black;
   line-height: initial;
 }
 
 footer {
   background-color: black;
-  padding: 40px 16px 15px 16px;
 }
 
-footer figure img {
+.footer__container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__container figure img {
+  padding: 16px 16px 15px 16px;
   width: 90px;
 }
 
-footer h4 {
+.footer__container h4 {
   margin-top: 40px;
   color: #919496;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 900;
   line-height: 1.4;
   text-transform: uppercase;
 }
 
-footer li {
+.footer__container li {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
   color: white;
@@ -572,7 +586,7 @@ footer li {
 }
 
 .country p {
-  font-size: 10px;
+  font-size: 1rem;
   color: #919496;
   margin-left: 4px;
 }
@@ -589,7 +603,7 @@ footer li {
 
 .links .links-list ul li {
   margin: 0;
-  font-size: 10px;
+  font-size: 1rem;
   color: #919496;
   margin-bottom: 20px;
 }
@@ -597,7 +611,7 @@ footer li {
 .links .icon-spotify {
   width: 40%;
   color: #919496;
-  font-size: 10px;
+  font-size: 1rem;
   text-align: end;
 }
 
@@ -607,4 +621,180 @@ footer li {
 
 .inactive-opacity {
   opacity: 0;
+}
+
+@media (min-width: 375px) {
+  .links .links-list ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .links .links-list ul li {
+    margin-right: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-info > div {
+    width: 30%;
+  }
+
+  .plans__card--header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 24px;
+  }
+
+  .section-1__buttons-container {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 40px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 24px 36px;
+    height: auto;
+  }
+  .header {
+    width: initial;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  #menu-container {
+    display: block;
+  }
+
+  .menu-nav {
+    display: block;
+    width: initial;
+    height: initial;
+    position: initial;
+  }
+
+  .menu-nav .spotify-logo {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  #menu-container .menu li {
+    margin: 0;
+    margin: 0 16px;
+  }
+
+  .menu li a {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .separator {
+    margin: auto 0;
+    width: 20px;
+    transform: rotate(90deg);
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 20px 20px 40px;
+  }
+
+  .footer__container figure img {
+    width: 132px;
+  }
+
+  .footer-info {
+    width: 60%;
+    margin-top: -8px;
+  }
+
+  .social-media-icons {
+    margin: 0 12px 0 36px;
+  }
+
+  .social-media-icons ul li {
+    width: 54px;
+    height: 54px;
+  }
+
+  .country {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__container {
+    width: 100vw;
+    background-color: black;
+  }
+
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0;
+  }
+
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 24px;
+  }
+
+  .benefits li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .benefits__info {
+    margin: 0;
+    margin-top: 32px;
+  }
+
+  .benefits__info p {
+    text-align: center;
+  }
+
+  .plans {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .plans__card--header {
+    flex-direction: column;
+  }
+
+  .plans__card--header span {
+    font-size: 1.2rem;
+  }
+
+  .plans__card--benefits-list {
+    height: 300px;
+    display: block;
+  }
 }
